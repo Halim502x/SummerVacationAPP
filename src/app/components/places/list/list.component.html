@@ -1,0 +1,15 @@
+{{title}}
+
+@if(hasPlaces()) {
+    @for (place of places(); track place.id) {
+        <div>
+          <span> place Name : {{place.name}} </span>
+          <span> place img : {{place.imgurl}} </span> 
+          <span> place Address : {{place.addres}} </span> 
+        </div>
+        <button (click)="deleteplace(place.id)" >Remove</button>
+    }
+    
+} @else {
+    <p>chargement</p>
+}

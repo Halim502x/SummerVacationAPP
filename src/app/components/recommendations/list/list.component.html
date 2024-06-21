@@ -1,0 +1,24 @@
+{{titre}}
+
+@if (hasrecommendations()) {
+    <div>
+        <ul>
+            <li>
+                @for (recommend of recommendations(); track recommend.id) {
+                   <span> {{recommend.id}} </span>
+                   <span> {{recommend.placeAdress }}</span>
+                   <span> {{recommend.placeName}} </span>
+                   <span> {{recommend.placeimgurl}} </span>
+                   <span> {{recommend.rates}} </span>
+                   <button (click)="deleterecommendation(recommend.id)">Remove</button>
+                } @empty {
+                    <p>
+                        liste vide
+                    </p>
+                }
+            </li>
+        </ul>
+    </div>
+} @else {
+    <p>chargement ...</p>
+}

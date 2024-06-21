@@ -1,0 +1,11 @@
+{{title}}
+
+@if (place | async; as extplace) {
+    <span> {{extplace.id}} </span>
+    <span> {{extplace.name}} </span>
+    <span> {{extplace.addres}} </span>
+    <span> {{extplace.imgurl}} </span>
+    <button (click)="delelteplace(extplace.id)" >remove</button>
+} @else {
+    <span> No place found </span>
+}

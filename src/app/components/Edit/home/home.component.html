@@ -1,0 +1,8 @@
+<button (click)="onselect(1)">add place</button>
+<button (click)="onselect(2)">add recommendation</button>
+
+@if (editMode==1) {
+    <app-add-place></app-add-place>
+} @else {
+    <app-add-recommendation></app-add-recommendation>
+}
